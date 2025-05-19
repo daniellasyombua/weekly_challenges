@@ -1,0 +1,43 @@
+#carton{
+    width: 3cm;
+    height: 3cm;
+}
+#bamboo{
+    width: 3cm;
+    height: 3cm;
+}
+#tape{
+ width: 3cm;
+    height: 3cm;
+}
+#can{
+ width: 3cm;
+    height: 3cm;
+}
+#nails{
+ width: 3cm;
+    height: 3cm;
+}
+#glue{
+ width: 3cm;
+    height: 3cm;
+}
+#scissor{
+ width: 3cm;
+    height: 3cm;
+}
+#container{
+ width: 3cm;
+    height: 3cm;
+}
+#water{
+ width: 3cm;
+    height: 3cm;
+}
+#string{
+ width: 3cm;
+    height: 3cm;
+}
+.materials-used{
+    display: flex;
+}
