@@ -1,12 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
+
 <body>
-    <!-- jfhfkhf -->
+    <nav>
+        <div class="group-logo">
+            <img src="./images/glogo-removebg-preview.png" alt="" class="logo">
+            <p class="group-name">THE <br> JEGNITS</p>
+        </div>
+        <div class="links">
+            <a href="">Home</a>
+            <a href="">Projects</a>
+            <a href="">Help</a>
+            <a href="">Help</a>
+            <a href="" class="visit">Visit project</a>
+        </div>
+
+    </nav>
+
+    <div class="search-bar">
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search-input" placeholder="Search...">
+            <ul id="search-results"></ul>
+        </div>
+        <button>Search</button>
+    </div>
+    <div class="navigation">
+        <!-- <div class="group-logo">
+            <img src="./images/glogo-removebg-preview.png" alt="" class="logo">
+            <p class="group-name">THE <br> JEGNITS</p>
+        </div> -->
+        <div class="introduction">
+            <p> <strong class="ideal">IDEAL<br>
+                    PROJECTS</strong><br>
+                Unlock your curiosity
+        </div>
+    </div>
+    <div class="project" id="project-list">
+        <div class="projects" data-title="Water Well Project">
+            <img src="./images/well.jpeg" alt="">
+            <p>Water Well Project</p>
+        </div>
+        <div class="projects" data-title="Irrigation System">
+            <img src="./images/well.jpeg" alt="">
+            <p>Irrigation System</p>
+        </div>
+        <div class="projects" data-title="Water Filtration">
+            <img src="./images/well.jpeg" alt="">
+            <p>Water Filtration</p>
+        </div>
+        <div class="projects" data-title="Rainwater Harvesting">
+            <img src="./images/well.jpeg" alt="">
+            <p>Rainwater Harvesting</p>
+        </div>
+    </div>
+    <script>
+    const searchInput = document.getElementById('search-input');
+    const projectList = document.getElementById('project-list');
+    const projects = projectList.getElementsByClassName('projects');
+    searchInput.addEventListener('keyup', function () {
+        const searchTerm = searchInput.value.toLowerCase();
+        Array.from(projects).forEach(project => {
+            const title = project.getAttribute('data-title').toLowerCase();
+            if (title.includes(searchTerm)) {
+                project.style.display = 'block';
+            } else {
+                project.style.display = 'none';
+            }
+        });
+    });
+</script>
 </body>
+
 </html>
