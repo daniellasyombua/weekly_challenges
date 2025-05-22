@@ -19,10 +19,7 @@
         </div>
         <div class="links">
             <a href="">Home</a>
-            <a href="">Projects</a>
-            <a href="">Help</a>
-            <a href="">Help</a>
-            <a href="" class="visit">Visit project</a>
+            <a href="">About us</a>
         </div>
 
     </nav>
@@ -33,7 +30,7 @@
             <input type="text" id="search-input" placeholder="Search...">
             <ul id="search-results"></ul>
         </div>
-        <button>Search</button>
+        <button id="search_btn">Search</button>
     </div>
     <div class="navigation">
         <!-- <div class="group-logo">
@@ -46,25 +43,31 @@
                 Unlock your curiosity
         </div>
     </div>
-    <div class="project" id="project-list">
-        <div class="projects" data-title="Water Well Project">
-            <img src="./images/well.jpeg" alt="">
-            <p>Water Well Project</p>
-        </div>
-        <div class="projects" data-title="Irrigation System">
-            <img src="./images/well.jpeg" alt="">
-            <p>Irrigation System</p>
-        </div>
-        <div class="projects" data-title="Water Filtration">
-            <img src="./images/well.jpeg" alt="">
-            <p>Water Filtration</p>
-        </div>
-        <div class="projects" data-title="Rainwater Harvesting">
-            <img src="./images/well.jpeg" alt="">
-            <p>Rainwater Harvesting</p>
-        </div>
+   
+    
+<div class="project-container" id="projectContainer">
+    <div class="desc-popup" id="descPopup"></div>
+    <div class="project-row" id="projectRow">
+
+        <div class="project-image" >
+           <a href=""> <img src="images/filter.jpg" alt="Kitten 3"></a>
+           <div class="middle">PROJECT ONE: Water filtration system.</div>
+          </div>
+
+      <div class="project-image" >
+        <a href=""><img src="images/well.jpeg" alt="Kitten 1" id="well"></a>
+        <div class="middle">PROJECT TWO: Water well.</div>
+      </div>
+
+      <div class="project-image" >
+        <a href="procedure.html"><img src="images/cards.jpg" alt="Kitten 2" id="card"></a>
+        <div class="middle">PROJECT THREE: Trait builder card game.</div>
+      </div>
+      
     </div>
-    <script>
+  </div>
+
+  <script>
     const searchInput = document.getElementById('search-input');
     const projectList = document.getElementById('project-list');
     const projects = projectList.getElementsByClassName('projects');
@@ -80,6 +83,41 @@
         });
     });
 </script>
+  <!-- <script>
+    const images = document.querySelectorAll('.project-image');
+    const galleryContainer = document.getElementById('projectContainer');
+    const descPopup = document.getElementById('descPopup');
+    let selectedImg = null;
+    images.forEach(imgDiv => {
+      imgDiv.addEventListener('click', function (e) {
+        galleryContainer.style.backgroundImage = `url('${imgDiv.getAttribute('data-bg')}')`;
+        descPopup.textContent = imgDiv.getAttribute('data-desc');
+        galleryContainer.classList.add('background-active');
+        images.forEach(im => im.classList.remove('selected'));
+        imgDiv.classList.add('selected');
+        selectedImg = imgDiv;
+        e.stopPropagation();
+      });
+    });
+    galleryContainer.addEventListener('click', function(e) {
+      if (e.target === galleryContainer || e.target === descPopup) {
+        galleryContainer.style.backgroundImage = '';
+        descPopup.textContent = '';
+        galleryContainer.classList.remove('background-active');
+        images.forEach(im => im.classList.remove('selected'));
+        selectedImg = null;
+      }
+    });
+    window.addEventListener('keydown', function(e) {
+      if (galleryContainer.classList.contains('background-active') && e.key === 'Escape') {
+        galleryContainer.style.backgroundImage = '';
+        descPopup.textContent = '';
+        galleryContainer.classList.remove('background-active');
+        images.forEach(im => im.classList.remove('selected'));
+        selectedImg = null;
+      }
+    });
+  </script> -->
 </body>
 
 </html>
