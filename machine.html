@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Pulley System</title>
+  <link href="machine.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-content">
+      <h1>Simple Pulley System</h1>
+      <p class="subtitle">A Human-Powered Water Fetching Solution</p>
+    </div>
+
+  </header>
+      <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="procedure.html">Machine Description</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+  <section class="intro section">
+    <div class="intro-content">  
+    <div class="intro text">
+    <h2>Introduction</h2>
+    <p>In this week's project, the challenge was to apply physics, engineering, and human-centered design to come up with a machine that does work, 
+      entirely powered by human effort. The machine was built using readily available materials that are environmentally friendly. It was a blend of
+       physics, creativity, and problem-solving. 
+The group came up with a system for fetching water. It is a single fixed pulley that demonstrates mechanical advantage and explains how pulley systems
+ work. The task involved was pulling where a user pulls water from the well.
+</p>
+</div>
+ <div class="intro-image">
+<img src="Images/project-image.jpg" alt="project image" id="intro-img">
+</div>
+</div>
+</section>
+
+  <section class="materials section">
+    <h2>Materials Used</h2>
+    <div class="materials-grid">
+      <div class="material-card">
+        <img src="Images/carton.jpg" alt="Carton">
+        <p>Carton</p>
+      </div>
+      <div class="material-card">
+        <img src="Images/bamboo.jpg" alt="Bamboo Sticks">
+        <p>Bamboo Sticks</p>
+      </div>
+      <div class="material-card">
+        <img src="Images/tape.jpg" alt="Tape">
+        <p>Tape</p>
+      </div>
+      <div class="material-card">
+        <img src="Images/can.jpg" alt="Can">
+        <p>Can</p>
+      </div>
+      <div class="material-card">
+        <img src="Images/nails.jpg" alt="Nails">
+        <p>Nails</p>
+      </div>
+      <div class="material-card">
+        <img src="Images/glue.jpg" alt="Glue">
+        <p>Glue</p>
+      </div>
+      <div class="material-card">
+        <img src="Images/scissors.jpg" alt="Scissors">
+        <p>Scissors</p>
+      </div>
+      <div class="material-card">
+        <img src="Images/water container.jpg" alt="Jug">
+        <p>Jug</p>
+      </div>
+      <div class="material-card">
+        <img src="Images/water.jpg" alt="Water">
+        <p>Water</p>
+      </div>
+      <div class="material-card">
+        <img src="Images/string.jpg" alt="String">
+        <p>String</p>
+      </div>
+    </div>
+  </section>
+  <section class="procedure section">
+    <h2>Procedure</h2>
+    <ul class="procedure-list">
+      <li>Cut the carton to create the roof of the well, and the bottom part was to hold the jug containing water.</li>
+      <li>Place bamboo sticks on both sides of the carton to create stands.</li>
+      <li>Position a bamboo stick horizontally across the stands to act as the pulley support.</li>
+      <li>Use nails to create holes in the can for the rope to pass through.</li>
+      <li>Hang the can on the horizontal bamboo stick using a string.</li>
+      <li>Craft wheels from the carton to facilitate lowering and lifting the can for water fetching.</li>
+      <li>Design the well’s walls on plain paper and attach them to the carton using glue.</li>
+    </ul>
+  </section>
+ <section class="how-it-works section">
+  <h2>How It Works</h2>
+  <div class="video-text">
+        <div class="text-section">
+    <p>The machine functions as a well, where a user operates the wheel to lower a can into the jug to fetch water. By
+      rotating the wheel clockwise, the user pulls the water up to transfer it into a bucket or drum.</p>
+    <p>The mechanical principle is based on work, where energy is transferred by applying force along the pulley. The
+      mechanical advantage is 1, as the input force equals the output force, determined by the water’s weight. This
+      system is energy-efficient compared to pulling water directly with a rope, and its walled design enhances user
+      safety by preventing accidents.</p>
+    <p>The system performs as expected, but an improvement could involve increasing the pulley’s speed to lower the can
+      automatically, reducing manual effort to only pulling the water upward.</p>
+  </div>
+  <div class="video-container">
+            <video controls poster="Images/project-image.jpg" id="demo-video">
+                <source src="videos/PXL_20250515_050126410 (1).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-button" aria-label="Play video"></button>
+            <p class="video-caption">Our team demonstrates the pulley system in action, fetching water from the well.</p>
+        </div>
+  </div>
+    </section>
+  <script>
+    
+        const video = document.getElementById('demo-video');
+        const playButton = document.querySelector('.play-button');
+        video.addEventListener('play', () => {
+            playButton.style.display = 'none';
+        });
+        video.addEventListener('pause', () => {
+            playButton.style.display = 'block';
+        });
+        playButton.addEventListener('click', () => {
+            video.play();
+        });
+    </script>
+
+  <footer>
+    <p>&copy; 2025 Simple Pulley System Project. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
+
+
