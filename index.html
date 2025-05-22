@@ -18,8 +18,8 @@
             <p class="group-name">THE <br> JEGNITS</p>
         </div>
         <div class="links">
-            <a href="">Home</a>
-            <a href="">About us</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
         </div>
 
     </nav>
@@ -55,12 +55,12 @@
           </div>
 
       <div class="project-image" >
-        <a href=""><img src="images/well.jpeg" alt="Kitten 1" id="well"></a>
+        <a href="machine.html"><img src="images/well.jpeg" alt="Kitten 1" id="well"></a>
         <div class="middle">PROJECT TWO: Water well.</div>
       </div>
 
       <div class="project-image" >
-        <a href="procedure.html"><img src="images/cards.jpg" alt="Kitten 2" id="card"></a>
+        <a href=""><img src="images/cards.jpg" alt="Kitten 2" id="card"></a>
         <div class="middle">PROJECT THREE: Trait builder card game.</div>
       </div>
       
@@ -83,41 +83,7 @@
         });
     });
 </script>
-  <!-- <script>
-    const images = document.querySelectorAll('.project-image');
-    const galleryContainer = document.getElementById('projectContainer');
-    const descPopup = document.getElementById('descPopup');
-    let selectedImg = null;
-    images.forEach(imgDiv => {
-      imgDiv.addEventListener('click', function (e) {
-        galleryContainer.style.backgroundImage = `url('${imgDiv.getAttribute('data-bg')}')`;
-        descPopup.textContent = imgDiv.getAttribute('data-desc');
-        galleryContainer.classList.add('background-active');
-        images.forEach(im => im.classList.remove('selected'));
-        imgDiv.classList.add('selected');
-        selectedImg = imgDiv;
-        e.stopPropagation();
-      });
-    });
-    galleryContainer.addEventListener('click', function(e) {
-      if (e.target === galleryContainer || e.target === descPopup) {
-        galleryContainer.style.backgroundImage = '';
-        descPopup.textContent = '';
-        galleryContainer.classList.remove('background-active');
-        images.forEach(im => im.classList.remove('selected'));
-        selectedImg = null;
-      }
-    });
-    window.addEventListener('keydown', function(e) {
-      if (galleryContainer.classList.contains('background-active') && e.key === 'Escape') {
-        galleryContainer.style.backgroundImage = '';
-        descPopup.textContent = '';
-        galleryContainer.classList.remove('background-active');
-        images.forEach(im => im.classList.remove('selected'));
-        selectedImg = null;
-      }
-    });
-  </script> -->
+  
 </body>
 
 </html>
